@@ -1,8 +1,8 @@
 package fr.natsystem.datamodel;
 
-public class Epargne {
+public class Epargne extends Compte {
 
-	private double solde;
+
 	private double tauxInteret;
 	
 	// créer une méthode calculInteret
@@ -16,22 +16,14 @@ public class Epargne {
 	
 	public double calculInteret() {
 		//this.solde = this.solde * this.tauxInteret;
-		this.solde *= this.tauxInteret; // modifie une propriete de l'objet Epargne 
-		return this.solde; //renvoie la nouvelle valeur de cette propriete
+		super.setSolde(super.getSolde() * this.tauxInteret); // modifie une propriete de l'objet Epargne 
+		return super.getSolde(); //renvoie la nouvelle valeur de cette propriete
 	}
 	
 	//TODO créer une methode appelée retraitArgent
 	public double retraitArgent(double montantARetirer) {
-		this.solde -= montantARetirer;
-		return this.solde;
-	}
-
-	public double getSolde() {
-		return this.solde;
-	}
-
-	public void setSolde(double solde) {
-		this.solde = solde;
+		super.setSolde(super.getSolde() - montantARetirer);
+		return super.getSolde();
 	}
 
 	public double getTauxInteret() {

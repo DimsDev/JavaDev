@@ -6,15 +6,15 @@ public class Calculs {
 	public static int addition(int a, int b) { // 2 paramètres, a et b, de type int
 		// retourne une valeur de type int
 		
-		int resultat; // ondéfinit une variable résultat
-		resultat = a+b; // on met l'addition de a et b dedans
+		 // on définit une variable résultat
+ // on met l'addition de a et b dedans
 		
+		int resultat = a+b;
 		return resultat; // on retourne la valeur
 	}
 	
 	
 	public static int factorielleWhile(int nombre) {
-		// while
 		int resultat=1;
 		int i = 1;
 		while (i<= nombre) {
@@ -26,7 +26,6 @@ public class Calculs {
 	
 	
 	public static int deuxiemeFactorielleWhile(int nombre) {
-		// while
 		if (nombre == 0) {
 			return 1;
 		}

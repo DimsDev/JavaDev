@@ -1,8 +1,8 @@
 package fr.natsystem.main; // definition du package dans lequel se trouve la classe
 
-import java.util.Scanner; //exemple d'import de code exterieur a notre projet
-
 import fr.natsystem.datamodel.Client; // exemple d'import de code dans notre projet
+import fr.natsystem.datamodel.Compte;
+import fr.natsystem.datamodel.Epargne;
 import fr.natsystem.services.Calculs;
 
 public class Main {
@@ -34,6 +34,10 @@ public class Main {
 		
 		
 		Calculs.addition(5, 8);
+		
+		Epargne epargne = new Epargne();
+		Compte compte = new Epargne();
+		System.out.println(compte.getClass());
 		
 	}
 	

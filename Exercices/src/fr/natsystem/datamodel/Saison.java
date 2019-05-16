@@ -18,4 +18,8 @@ public enum Saison {
 	public String toString() {
 		return nom + " - " + numSaison;
 	}
+	
+	public int numSaison() {
+		return numSaison;
+	}
 }

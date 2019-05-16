@@ -1,6 +1,6 @@
 package fr.natsystem.entites;
 
-public class Carre extends Rectangle implements Forme{
+public class Carre extends Rectangle {
 
 	public Carre() {
 		super();

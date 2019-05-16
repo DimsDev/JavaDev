@@ -1,6 +1,6 @@
 package fr.natsystem.entites;
 
-public class Triangle implements Forme{
+public class Triangle {
 
 	private double base; // premier côté
 	

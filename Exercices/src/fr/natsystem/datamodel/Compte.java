@@ -1,6 +1,16 @@
 package fr.natsystem.datamodel;
 
-public class Compte {
+public abstract class Compte {
+	// abstract = ne peut pas etre instancié
+	private double solde;
 
-	private int solde;
+	public double getSolde() {
+		return solde;
+	}
+
+	public void setSolde(double solde) {
+		this.solde = solde;
+	}
+	
+
 }

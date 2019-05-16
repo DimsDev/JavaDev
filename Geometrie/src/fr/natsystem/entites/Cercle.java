@@ -1,27 +1,34 @@
 package fr.natsystem.entites;
 
-public class Cercle {
+public class Cercle extends Ellipse implements Forme {
 
-	private double rayon;
-	public static double pi = 3.14;
+	public Cercle(double rayon) {
+		super(rayon, rayon);
+	}
 	
-
+	public Cercle() {
+	}
+	
 	public double getRayon() {
-		return rayon;
+		return super.getPetitRayon();
+	// return super.getGrandRayon();
 	}
 
 	public void setRayon(double rayon) {
-		this.rayon = rayon;
+		super.setGrandRayon(rayon);
+		super.setPetitRayon(rayon);
 	}
 	
-	public double calculPerimetre() { // prend le rayon de l'instance actuelle
-														// l'objet actuel
-										// et le multiplie par 2pi
-		return this.rayon*2*Math.PI;
+	// polymorphisme
+	@Override // redéfinition de méthode d'une classe parent
+	public double calculPerimetre() {
+		return 2*Math.PI*this.getRayon();
 	}
 	
-	public double calculAire() {
-		return this.rayon*this.rayon*Math.PI;
+	//surcharge de methode
+	public double calculPerimetre(String message) {
+		System.out.println(message);
+		return 2*Math.PI*this.getRayon();
 	}
 	
 }

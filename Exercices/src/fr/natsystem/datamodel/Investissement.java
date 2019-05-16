@@ -1,6 +1,6 @@
 package fr.natsystem.datamodel;
 
-public class Investissement {
+public class Investissement  extends Compte {
 
 	
 }
